@@ -154,7 +154,7 @@ document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault()
 
 function checkMoveCopy(){const a=document.querySelector('input[name="a"]:checked');const b=document.querySelector('input[name="b"]:checked');const f=document.getElementById('moveFeedback');f.style.display='block';if(!a||!b){f.textContent='Vælg et svar i begge situationer.';return}if(a.value==='move'&&b.value==='copy'){f.textContent='Godt valgt. I A flyttes filen til sin faste plads. I B kopieres filerne, fordi formålet er at lave en ekstra kopi.'}else{f.textContent='Se på formålet igen: Skal filen skifte fast placering, eller skal der findes en ekstra kopi?'}}
 
-const TEACHER_CODE='2468';
+const TEACHER_CODE='2002';
 const teacherForm=document.getElementById('teacherUnlockForm');
 const teacherInput=document.getElementById('teacherCode');
 const teacherMessage=document.getElementById('teacherMessage');
