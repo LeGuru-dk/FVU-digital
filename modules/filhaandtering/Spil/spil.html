@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fem sikre, interaktive øvelser om filhåndtering.">
+  <title>Mission Filagent | Fem spil om filhåndtering</title>
+  <link rel="stylesheet" href="spil.css">
+</head>
+<body>
+  <a class="skip-link" href="#spil">Spring til spillene</a>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">FVU-Digital · sikkert øvemiljø</p>
+      <h1>Mission Filagent</h1>
+      <p>Gennemfør fem små missioner. Alt foregår med opdigtede filer, så du kan prøve dig frem uden at ændre noget på din egen enhed.</p>
+      <div class="progress-card" aria-label="Samlet fremgang">
+        <strong id="progressText">0 af 5 missioner gennemført</strong>
+        <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+        <button class="button button--light" id="resetAll" type="button">Nulstil alle spil</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="game-nav" aria-label="Vælg spil">
+    <a href="#spil1">1. Sortér filer</a>
+    <a href="#spil2">2. Find filen</a>
+    <a href="#spil3">3. Omdøb</a>
+    <a href="#spil4">4. Flyt eller kopiér</a>
+    <a href="#spil5">5. Backup</a>
+  </nav>
+
+  <main id="spil" class="wrap">
+    <noscript><p class="notice">JavaScript skal være slået til, for at spillene virker.</p></noscript>
+
+    <section class="game" id="spil1" aria-labelledby="title1">
+      <div class="game__head"><span class="game__number">1</span><div><p class="eyebrow dark">Mission 1</p><h2 id="title1">Fil-sorteringsspillet</h2><p>Vælg en fil, og vælg derefter den mappe, den passer bedst i.</p></div></div>
+      <div class="scoreline"><span id="sortScore">0 af 5 placeret</span><button class="text-button" type="button" data-reset="sort">Start forfra</button></div>
+      <div class="sort-layout">
+        <div><h3>Filer</h3><div id="filePile" class="file-pile"></div></div>
+        <div><h3>Mapper</h3><div id="folderChoices" class="folder-grid"></div></div>
+      </div>
+      <p class="feedback" id="sortFeedback" aria-live="polite">Vælg først en fil.</p>
+    </section>
+
+    <section class="game" id="spil2" aria-labelledby="title2">
+      <div class="game__head"><span class="game__number">2</span><div><p class="eyebrow dark">Mission 2</p><h2 id="title2">Find den forsvundne fil</h2><p>Find <strong>Ferieplan_2025.docx</strong>. Du starter i Dokumenter.</p></div></div>
+      <div class="scoreline"><span>Forsøg: <strong id="findAttempts">0</strong></span><button class="text-button" type="button" data-reset="find">Start forfra</button></div>
+      <nav id="breadcrumbs" class="breadcrumbs" aria-label="Aktuel filsti"></nav>
+      <div id="folderView" class="explorer" aria-live="polite"></div>
+      <p class="feedback" id="findFeedback" aria-live="polite">Åbn en mappe for at lede.</p>
+    </section>
+
+    <section class="game" id="spil3" aria-labelledby="title3">
+      <div class="game__head"><span class="game__number">3</span><div><p class="eyebrow dark">Mission 3</p><h2 id="title3">Omdøb-mesteren</h2><p>Giv filerne navne, som gør dem lettere at finde igen. Behold den viste filtype.</p></div></div>
+      <form id="renameForm" class="rename-list" novalidate>
+        <label><span><strong>regning.pdf</strong><small>Elregning fra januar 2026</small></span><input name="rename1" autocomplete="off" placeholder="Skriv et bedre filnavn" aria-describedby="renameHelp1"><small id="renameHelp1">Forslag til model: indhold + dato.</small></label>
+        <label><span><strong>billede27.jpg</strong><small>Familieferie i Italien i 2025</small></span><input name="rename2" autocomplete="off" placeholder="Skriv et bedre filnavn" aria-describedby="renameHelp2"><small id="renameHelp2">Forslag til model: indhold + sted + år.</small></label>
+        <label><span><strong>ansøgning ny ny.docx</strong><small>Jobansøgning til en butik, anden version</small></span><input name="rename3" autocomplete="off" placeholder="Skriv et bedre filnavn" aria-describedby="renameHelp3"><small id="renameHelp3">Forslag til model: indhold + modtager + version.</small></label>
+        <div class="actions"><button class="button" type="submit">Kontrollér navnene</button><button class="button button--secondary" type="button" data-reset="rename">Start forfra</button></div>
+      </form>
+      <div class="feedback" id="renameFeedback" aria-live="polite">Udfyld alle tre felter.</div>
+    </section>
+
+    <section class="game" id="spil4" aria-labelledby="title4">
+      <div class="game__head"><span class="game__number">4</span><div><p class="eyebrow dark">Mission 4</p><h2 id="title4">Flyt eller kopiér?</h2><p>Læs formålet, og vælg den handling, der passer bedst.</p></div></div>
+      <form id="moveCopyForm" class="scenario-list">
+        <fieldset><legend>1. En opskrift ligger i Downloads. Den skal fremover kun ligge i Opskrifter/Kager.</legend><label><input type="radio" name="mc1" value="move"> Flyt</label><label><input type="radio" name="mc1" value="copy"> Kopiér</label></fieldset>
+        <fieldset><legend>2. Du vil lægge en ekstra kopi af dine vigtigste dokumenter på en ekstern harddisk.</legend><label><input type="radio" name="mc2" value="move"> Flyt</label><label><input type="radio" name="mc2" value="copy"> Kopiér</label></fieldset>
+        <fieldset><legend>3. Et billede ligger forkert i Regninger og skal kun ligge i Billeder.</legend><label><input type="radio" name="mc3" value="move"> Flyt</label><label><input type="radio" name="mc3" value="copy"> Kopiér</label></fieldset>
+        <fieldset><legend>4. Du vil sende en kopi af et dokument til et USB-drev og beholde originalen.</legend><label><input type="radio" name="mc4" value="move"> Flyt</label><label><input type="radio" name="mc4" value="copy"> Kopiér</label></fieldset>
+        <div class="actions"><button class="button" type="submit">Kontrollér mine valg</button><button class="button button--secondary" type="button" data-reset="moveCopy">Start forfra</button></div>
+      </form>
+      <div class="feedback" id="moveCopyFeedback" aria-live="polite">Besvar alle fire situationer.</div>
+    </section>
+
+    <section class="game" id="spil5" aria-labelledby="title5">
+      <div class="game__head"><span class="game__number">5</span><div><p class="eyebrow dark">Mission 5</p><h2 id="title5">Backup-battle</h2><p>Placér hver løsning efter risikoen for at miste billederne. Vælg én person ad gangen og derefter et risikoniveau.</p></div></div>
+      <div class="scoreline"><span id="riskScore">0 af 3 placeret</span><button class="text-button" type="button" data-reset="risk">Start forfra</button></div>
+      <div class="risk-layout">
+        <div><h3>Personer</h3><div id="peopleChoices" class="people-grid"></div></div>
+        <div><h3>Risiko</h3><div id="riskChoices" class="risk-grid"></div></div>
+      </div>
+      <p class="feedback" id="riskFeedback" aria-live="polite">Vælg først en person.</p>
+      <div class="event-round" id="eventRound" hidden>
+        <h3>Bonus: Hvad hjælper bedst?</h3>
+        <form id="eventForm">
+          <fieldset><legend>Telefonen bliver væk, men billederne er synkroniseret til en cloudtjeneste.</legend><label><input type="radio" name="event" value="cloud"> Hent billederne via cloudtjenesten</label><label><input type="radio" name="event" value="none"> Der er ingen mulighed</label></fieldset>
+          <button class="button" type="submit">Kontrollér bonussvar</button>
+        </form>
+        <p class="feedback" id="eventFeedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="finish" aria-labelledby="finishTitle">
+      <h2 id="finishTitle">Din missionsstatus</h2>
+      <p id="finishText">Gennemfør alle fem missioner for at blive Filagent.</p>
+    </section>
+  </main>
+
+  <footer>FVU-Digital · Mission Filagent · Ingen rigtige filer ændres</footer>
+  <script src="spil.js" defer></script>
+</body>
+</html>
