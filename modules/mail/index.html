@@ -49,5 +49,9 @@ const quiz=document.getElementById('quiz');quiz.addEventListener('submit',e=>{e.
 // Underviserområde
 const CODE='2002',form=document.getElementById('teacherUnlockForm'),input=document.getElementById('teacherCode'),message=document.getElementById('teacherMessage'),content=document.getElementById('teacherContent');form.addEventListener('submit',e=>{e.preventDefault();if(input.value===CODE){content.hidden=false;message.textContent='Området er åbnet.';message.style.color='var(--green)';input.value='';content.scrollIntoView({behavior:'smooth'})}else{message.textContent='Koden er ikke korrekt.';message.style.color='var(--danger)';input.select()}});document.getElementById('teacherClose').addEventListener('click',()=>{content.hidden=true;message.textContent='Området er lukket.';document.getElementById('underviser').scrollIntoView({behavior:'smooth'})});
 </script>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>

@@ -18,4 +18,9 @@
 const tabButtons=document.querySelectorAll('[data-tab]'),tabs=document.querySelectorAll('.tab');tabButtons.forEach(b=>b.addEventListener('click',()=>{tabButtons.forEach(x=>x.classList.remove('active'));tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');const p=document.getElementById(b.dataset.tab);if(p)p.classList.add('active')}));
 document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;['q1','q2','q3','q4','q5'].forEach(n=>{const x=document.querySelector('input[name="'+n+'"]:checked');if(x){answered++;score+=Number(x.value)}});const r=document.getElementById('result');r.style.display='block';r.textContent=answered<5?'Besvar alle fem spørgsmål først.':'Du fik '+score+' ud af 5 rigtige. '+(score===5?'Flot. Du har styr på de centrale begreber.':'Læs de relevante afsnit igen, og prøv derefter testen en gang til.');});
 const TEACHER_CODE='2002',teacherForm=document.getElementById('teacherUnlockForm'),teacherInput=document.getElementById('teacherCode'),teacherMessage=document.getElementById('teacherMessage'),teacherContent=document.getElementById('teacherContent');teacherForm.addEventListener('submit',e=>{e.preventDefault();if(teacherInput.value===TEACHER_CODE){teacherContent.hidden=false;teacherMessage.textContent='Området er åbnet.';teacherMessage.style.color='var(--green)';teacherInput.value='';teacherContent.scrollIntoView({behavior:'smooth'})}else{teacherMessage.textContent='Koden er ikke korrekt.';teacherMessage.style.color='#a43b32';teacherInput.select()}});document.getElementById('teacherClose').addEventListener('click',()=>{teacherContent.hidden=true;teacherMessage.textContent='Området er lukket.';document.getElementById('underviser').scrollIntoView({behavior:'smooth'})});
-</script></body></html>
+</script>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body></html>

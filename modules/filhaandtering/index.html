@@ -163,4 +163,9 @@ const teacherContent=document.getElementById('teacherContent');
 const teacherClose=document.getElementById('teacherClose');
 teacherForm.addEventListener('submit',e=>{e.preventDefault();if(teacherInput.value===TEACHER_CODE){teacherContent.hidden=false;teacherMessage.textContent='Området er åbnet.';teacherMessage.style.color='var(--green)';teacherInput.value='';teacherContent.scrollIntoView({behavior:'smooth',block:'start'});}else{teacherMessage.textContent='Koden er ikke korrekt.';teacherMessage.style.color='#a43b32';teacherInput.select();}});
 teacherClose.addEventListener('click',()=>{teacherContent.hidden=true;teacherMessage.textContent='Området er lukket.';teacherMessage.style.color='var(--muted)';document.getElementById('underviser').scrollIntoView({behavior:'smooth',block:'start'});});
-</script></body></html>
+</script>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body></html>
