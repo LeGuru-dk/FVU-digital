@@ -175,7 +175,7 @@ function renderItems(items, target = elements.container) {
         if (item.type === "folder") {
             const details = document.createElement("details");
             details.className = "material-folder";
-            details.open = true;
+            details.open = false;
 
             const summary = document.createElement("summary");
             summary.textContent = `📁 ${item.name}`;
