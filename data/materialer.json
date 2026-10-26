@@ -1,38 +1,164 @@
 {
-  "generated": "2026-10-26T15:16:24.314432+00:00",
+  "generated": "2026-10-26T16:24:32.452945+00:00",
   "items": [
     {
       "type": "folder",
       "name": "filhaandtering",
       "children": [
         {
+          "type": "folder",
+          "name": "materialer",
+          "children": [
+            {
+              "type": "file",
+              "name": "10_Kursistkompendie_Filhåndtering_Mac.pdf",
+              "url": "downloads/filhaandtering/materialer/10_Kursistkompendie_Filh%C3%A5ndtering_Mac.pdf",
+              "extension": "pdf",
+              "size": 5218485,
+              "size_display": "5,0 MB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            },
+            {
+              "type": "file",
+              "name": "10_Kursistkompendie_Filhåndtering_PC.pdf",
+              "url": "downloads/filhaandtering/materialer/10_Kursistkompendie_Filh%C3%A5ndtering_PC.pdf",
+              "extension": "pdf",
+              "size": 5218475,
+              "size_display": "5,0 MB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            },
+            {
+              "type": "file",
+              "name": "10_Kursistkompendie_Filhåndtering_Tablets.pdf",
+              "url": "downloads/filhaandtering/materialer/10_Kursistkompendie_Filh%C3%A5ndtering_Tablets.pdf",
+              "extension": "pdf",
+              "size": 5213415,
+              "size_display": "5,0 MB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "informationssoegning uden ai",
+      "children": [
+        {
           "type": "file",
-          "name": "10_Kursistkompendie_Filhåndtering_Mac.pdf",
-          "url": "downloads/filhaandtering/10_Kursistkompendie_Filh%C3%A5ndtering_Mac.pdf",
+          "name": "Kursistkompendie_informationssøgning.pdf",
+          "url": "downloads/informationssoegning%20uden%20ai/Kursistkompendie_informationss%C3%B8gning.pdf",
           "extension": "pdf",
-          "size": 5218485,
-          "size_display": "5,0 MB",
-          "modified": "2026-10-26T16:15:56+01:00",
+          "size": 4776029,
+          "size_display": "4,6 MB",
+          "modified": "2026-10-26T17:23:15+01:00",
           "modified_display": "26-10-2026"
         },
         {
           "type": "file",
-          "name": "10_Kursistkompendie_Filhåndtering_PC.pdf",
-          "url": "downloads/filhaandtering/10_Kursistkompendie_Filh%C3%A5ndtering_PC.pdf",
+          "name": "Kursistkompendie_informationssøgning_med_AI.pdf",
+          "url": "downloads/informationssoegning%20uden%20ai/Kursistkompendie_informationss%C3%B8gning_med_AI.pdf",
           "extension": "pdf",
-          "size": 5218475,
-          "size_display": "5,0 MB",
-          "modified": "2026-10-26T16:15:56+01:00",
+          "size": 4615643,
+          "size_display": "4,4 MB",
+          "modified": "2026-10-26T17:23:15+01:00",
+          "modified_display": "26-10-2026"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "lær din computer at kende",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Filer fra din lærer",
+          "children": [
+            {
+              "type": "file",
+              "name": "Flyttes.docx",
+              "url": "downloads/l%C3%A6r%20din%20computer%20at%20kende/Filer%20fra%20din%20l%C3%A6rer/Flyttes.docx",
+              "extension": "docx",
+              "size": 17252,
+              "size_display": "16,8 KB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            },
+            {
+              "type": "file",
+              "name": "Kopieres.docx",
+              "url": "downloads/l%C3%A6r%20din%20computer%20at%20kende/Filer%20fra%20din%20l%C3%A6rer/Kopieres.docx",
+              "extension": "docx",
+              "size": 29841,
+              "size_display": "29,1 KB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            },
+            {
+              "type": "file",
+              "name": "PDF-Filen.pdf",
+              "url": "downloads/l%C3%A6r%20din%20computer%20at%20kende/Filer%20fra%20din%20l%C3%A6rer/PDF-Filen.pdf",
+              "extension": "pdf",
+              "size": 65992,
+              "size_display": "64,4 KB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            },
+            {
+              "type": "file",
+              "name": "Søgogfind.docx",
+              "url": "downloads/l%C3%A6r%20din%20computer%20at%20kende/Filer%20fra%20din%20l%C3%A6rer/S%C3%B8gogfind.docx",
+              "extension": "docx",
+              "size": 1087598,
+              "size_display": "1,0 MB",
+              "modified": "2026-10-26T17:23:15+01:00",
+              "modified_display": "26-10-2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Macbooks",
+      "children": [
+        {
+          "type": "file",
+          "name": "Kursistkompendie_Generel brug af Mac.pdf",
+          "url": "downloads/Macbooks/Kursistkompendie_Generel%20brug%20af%20Mac.pdf",
+          "extension": "pdf",
+          "size": 5048981,
+          "size_display": "4,8 MB",
+          "modified": "2026-10-26T17:23:15+01:00",
+          "modified_display": "26-10-2026"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "mail",
+      "children": [
+        {
+          "type": "file",
+          "name": "Kursistkompendie_G-mail.pdf",
+          "url": "downloads/mail/Kursistkompendie_G-mail.pdf",
+          "extension": "pdf",
+          "size": 587144,
+          "size_display": "573,4 KB",
+          "modified": "2026-10-26T17:23:15+01:00",
           "modified_display": "26-10-2026"
         },
         {
           "type": "file",
-          "name": "10_Kursistkompendie_Filhåndtering_Tablets.pdf",
-          "url": "downloads/filhaandtering/10_Kursistkompendie_Filh%C3%A5ndtering_Tablets.pdf",
+          "name": "Kursistkompendie_Outlook.pdf",
+          "url": "downloads/mail/Kursistkompendie_Outlook.pdf",
           "extension": "pdf",
-          "size": 5213415,
-          "size_display": "5,0 MB",
-          "modified": "2026-10-26T16:15:56+01:00",
+          "size": 593674,
+          "size_display": "579,8 KB",
+          "modified": "2026-10-26T17:23:15+01:00",
           "modified_display": "26-10-2026"
         }
       ]
@@ -60,7 +186,7 @@
                       "extension": "pdf",
                       "size": 901974,
                       "size_display": "880,8 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -70,7 +196,7 @@
                       "extension": "pdf",
                       "size": 1272836,
                       "size_display": "1,2 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -80,7 +206,7 @@
                       "extension": "pdf",
                       "size": 824091,
                       "size_display": "804,8 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     }
                   ]
@@ -96,7 +222,7 @@
                       "extension": "docx",
                       "size": 39314,
                       "size_display": "38,4 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -106,7 +232,7 @@
                       "extension": "docx",
                       "size": 41690,
                       "size_display": "40,7 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -116,7 +242,7 @@
                       "extension": "pdf",
                       "size": 2012118,
                       "size_display": "1,9 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -126,7 +252,7 @@
                       "extension": "pdf",
                       "size": 2921760,
                       "size_display": "2,8 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -136,7 +262,7 @@
                       "extension": "pdf",
                       "size": 2716425,
                       "size_display": "2,6 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -146,7 +272,7 @@
                       "extension": "docx",
                       "size": 39583,
                       "size_display": "38,7 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -156,7 +282,7 @@
                       "extension": "docx",
                       "size": 37534,
                       "size_display": "36,7 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -166,7 +292,7 @@
                       "extension": "docx",
                       "size": 38773,
                       "size_display": "37,9 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     }
                   ]
@@ -182,7 +308,7 @@
                       "extension": "pdf",
                       "size": 1165889,
                       "size_display": "1,1 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -192,7 +318,7 @@
                       "extension": "pdf",
                       "size": 2908976,
                       "size_display": "2,8 MB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     }
                   ]
@@ -208,7 +334,7 @@
                       "extension": "docx",
                       "size": 41867,
                       "size_display": "40,9 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -218,7 +344,7 @@
                       "extension": "docx",
                       "size": 48001,
                       "size_display": "46,9 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -228,7 +354,7 @@
                       "extension": "docx",
                       "size": 38893,
                       "size_display": "38,0 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     },
                     {
@@ -238,7 +364,7 @@
                       "extension": "docx",
                       "size": 38813,
                       "size_display": "37,9 KB",
-                      "modified": "2026-10-26T16:15:56+01:00",
+                      "modified": "2026-10-26T17:23:15+01:00",
                       "modified_display": "26-10-2026"
                     }
                   ]
@@ -250,7 +376,7 @@
                   "extension": "pdf",
                   "size": 971704,
                   "size_display": "948,9 KB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 }
               ]
@@ -266,7 +392,7 @@
                   "extension": "pdf",
                   "size": 1313011,
                   "size_display": "1,3 MB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 },
                 {
@@ -276,7 +402,7 @@
                   "extension": "pdf",
                   "size": 1728186,
                   "size_display": "1,6 MB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 },
                 {
@@ -286,7 +412,7 @@
                   "extension": "pdf",
                   "size": 986181,
                   "size_display": "963,1 KB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 },
                 {
@@ -296,7 +422,7 @@
                   "extension": "pdf",
                   "size": 1110368,
                   "size_display": "1,1 MB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 },
                 {
@@ -306,7 +432,7 @@
                   "extension": "xlsx",
                   "size": 1161639,
                   "size_display": "1,1 MB",
-                  "modified": "2026-10-26T16:15:56+01:00",
+                  "modified": "2026-10-26T17:23:15+01:00",
                   "modified_display": "26-10-2026"
                 }
               ]
