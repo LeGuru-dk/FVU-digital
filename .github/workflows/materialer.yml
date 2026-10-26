@@ -1,32 +1,32 @@
-name Generer materialeliste
+name: Generer materialeliste
 
-on
-  push
-    branches
+on:
+  push:
+    branches:
       - main
 
-  workflow_dispatch
+  workflow_dispatch:
 
-permissions
-  contents write
+permissions:
+  contents: write
 
-jobs
-  generate-materials
-    runs-on ubuntu-latest
+jobs:
+  generate-materials:
+    runs-on: ubuntu-latest
 
-    steps
-      - name Hent repository
-        uses actionscheckout@v4
+    steps:
+      - name: Hent repository
+        uses: actions/checkout@v4
 
-      - name Opsæt Python
-        uses actionssetup-python@v5
-        with
-          python-version 3.x
+      - name: Opsæt Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-      - name Generér materialeliste
-        run python scriptsgenerate-materials.py
+      - name: Generér materialeliste
+        run: python scripts/generate-materials.py
 
-      - name Commit opdateret JSON
-        uses stefanzweifelgit-auto-commit-action@v5
-        with
-          commit_message Automatisk opdatering af materialer.json
+      - name: Commit opdateret JSON
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatisk opdatering af materialer.json"
