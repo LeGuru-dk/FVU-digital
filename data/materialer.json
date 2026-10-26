@@ -1,0 +1,227 @@
+{
+  "generated": "2026-10-26T06:23:44.930633+00:00",
+  "items": [
+    {
+      "type": "folder",
+      "name": "virksomhedshold",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Cimbria",
+          "children": [
+            {
+              "type": "folder",
+              "name": "mandag",
+              "children": [
+                {
+                  "type": "folder",
+                  "name": "copilot",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "Kapitel_1_Copilot_som_din_personlige_assistent.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/copilot/Kapitel_1_Copilot_som_din_personlige_assistent.pdf",
+                      "extension": "pdf",
+                      "size": 901974,
+                      "size_display": "880,8 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Sty_på_copilot_udleveringsark.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/copilot/Sty_p%C3%A5_copilot_udleveringsark.pdf",
+                      "extension": "pdf",
+                      "size": 1272836,
+                      "size_display": "1,2 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Styr_på_Copilot.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/copilot/Styr_p%C3%A5_Copilot.pdf",
+                      "extension": "pdf",
+                      "size": 824091,
+                      "size_display": "804,8 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "kalender_teams_og_effektive_møder",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "Fælles_mødedokument.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/F%C3%A6lles_m%C3%B8dedokument.docx",
+                      "extension": "docx",
+                      "size": 39314,
+                      "size_display": "38,4 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Internationalt_Møde.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/Internationalt_M%C3%B8de.docx",
+                      "extension": "docx",
+                      "size": 41690,
+                      "size_display": "40,7 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "kalender_teams_og_effektive_møder.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/kalender_teams_og_effektive_m%C3%B8der.pdf",
+                      "extension": "pdf",
+                      "size": 2012118,
+                      "size_display": "1,9 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "kalender_teams_og_effektive_møder_udskrift.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/kalender_teams_og_effektive_m%C3%B8der_udskrift.pdf",
+                      "extension": "pdf",
+                      "size": 2921760,
+                      "size_display": "2,8 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Kapitel_2_Kalender_Teams_og_effektive_møder.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/Kapitel_2_Kalender_Teams_og_effektive_m%C3%B8der.pdf",
+                      "extension": "pdf",
+                      "size": 2716425,
+                      "size_display": "2,6 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Mødeforberedelse.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/M%C3%B8deforberedelse.docx",
+                      "extension": "docx",
+                      "size": 39583,
+                      "size_display": "38,7 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Praktisk_øvelse_2.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/Praktisk_%C3%B8velse_2.docx",
+                      "extension": "docx",
+                      "size": 37534,
+                      "size_display": "36,7 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Rånoter_møde.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/kalender_teams_og_effektive_m%C3%B8der/R%C3%A5noter_m%C3%B8de.docx",
+                      "extension": "docx",
+                      "size": 38773,
+                      "size_display": "37,9 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "outlook_og_personlig_produktivitet",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "Kapitel_3_Outlook_og_personlig_produktivitet_layout.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/outlook_og_personlig_produktivitet/Kapitel_3_Outlook_og_personlig_produktivitet_layout.pdf",
+                      "extension": "pdf",
+                      "size": 1165889,
+                      "size_display": "1,1 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Outlook_og_personlig_produktivitet__præsentation.pdf",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/outlook_og_personlig_produktivitet/Outlook_og_personlig_produktivitet__pr%C3%A6sentation.pdf",
+                      "extension": "pdf",
+                      "size": 2908976,
+                      "size_display": "2,8 MB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    }
+                  ]
+                },
+                {
+                  "type": "folder",
+                  "name": "vejledninger_til_Copilot-agenter",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "Vejledning_Copilot-agent_kaffeleverandører.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/vejledninger_til_Copilot-agenter/Vejledning_Copilot-agent_kaffeleverand%C3%B8rer.docx",
+                      "extension": "docx",
+                      "size": 41867,
+                      "size_display": "40,9 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Vejledning_Copilot-agent_til_råvareovervågning.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/vejledninger_til_Copilot-agenter/Vejledning_Copilot-agent_til_r%C3%A5vareoverv%C3%A5gning.docx",
+                      "extension": "docx",
+                      "size": 48001,
+                      "size_display": "46,9 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Vejledning_flersproget_mailagent.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/vejledninger_til_Copilot-agenter/Vejledning_flersproget_mailagent.docx",
+                      "extension": "docx",
+                      "size": 38893,
+                      "size_display": "38,0 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    },
+                    {
+                      "type": "file",
+                      "name": "Vejledning_SAP_superbruger_agent.docx",
+                      "url": "downloads/virksomhedshold/Cimbria/mandag/vejledninger_til_Copilot-agenter/Vejledning_SAP_superbruger_agent.docx",
+                      "extension": "docx",
+                      "size": 38813,
+                      "size_display": "37,9 KB",
+                      "modified": "2026-10-26T07:23:30+01:00",
+                      "modified_display": "26-10-2026"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "Opstart_Cimbria.pdf",
+                  "url": "downloads/virksomhedshold/Cimbria/mandag/Opstart_Cimbria.pdf",
+                  "extension": "pdf",
+                  "size": 971704,
+                  "size_display": "948,9 KB",
+                  "modified": "2026-10-26T07:23:30+01:00",
+                  "modified_display": "26-10-2026"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
