@@ -7,6 +7,7 @@ const topicDefinitions = [
     { slug: "google-fotos", title: "Google Fotos", icon: "🖼️", text: "Billeder, deling og organisering" },
     { slug: "informationssoegning", title: "Informationssøgning", icon: "🔎", text: "Søgning og kildekritik" },
     { slug: "jobsogning", title: "Jobsøgning", icon: "💼", text: "Digitale værktøjer til jobsøgning" },
+    { slug: "laer-din-computer-at-kende", title: "Lær din computer at kende", icon: "💻", text: "Computerens dele, mus, tastatur, mapper og filer" },
     { slug: "mail", title: "Mail", icon: "✉️", text: "Mail, mapper og god digital praksis" },
     { slug: "mobil", title: "Mobil", icon: "📱", text: "Smartphone, apps og indstillinger" },
     { slug: "ordbog", title: "Ordbog", icon: "📖", text: "Ord og begreber fra undervisningen" },
