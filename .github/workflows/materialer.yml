@@ -1,0 +1,32 @@
+name Generer materialeliste
+
+on
+  push
+    branches
+      - main
+
+  workflow_dispatch
+
+permissions
+  contents write
+
+jobs
+  generate-materials
+    runs-on ubuntu-latest
+
+    steps
+      - name Hent repository
+        uses actionscheckout@v4
+
+      - name Opsæt Python
+        uses actionssetup-python@v5
+        with
+          python-version 3.x
+
+      - name Generér materialeliste
+        run python scriptsgenerate-materials.py
+
+      - name Commit opdateret JSON
+        uses stefanzweifelgit-auto-commit-action@v5
+        with
+          commit_message Automatisk opdatering af materialer.json
