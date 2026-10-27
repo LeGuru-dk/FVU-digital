@@ -148,7 +148,9 @@ ansøgning ny.docx</div><p>Alle filerne ligger i Downloads.</p></div><div class=
 <details><summary>Antagelser og afgrænsninger</summary><p>Tekstfelterne i prototypen gemmer ikke svar efter genindlæsning. Downloadlinks og videoer er pladsholdere, indtil de endelige materialer er uploadet. Kodelåsen er kun en praktisk afskærmning og ikke egentlig adgangssikkerhed.</p></details>
 </div>
 </section>
-</main><footer class="footer">FVU-Digital • Filhåndtering • Dybdegående digital støtte til kursistkompendiet</footer>
+
+
+
 <script>
 const buttons=document.querySelectorAll('[data-tab]'),tabs=document.querySelectorAll('.tab');buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')}));
 document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;['q1','q2','q3','q4','q5'].forEach(n=>{const x=document.querySelector('input[name="'+n+'"]:checked');if(x){answered++;score+=Number(x.value)}});const r=document.getElementById('result');r.style.display='block';r.textContent=answered<5?'Besvar alle fem spørgsmål først.':'Du fik '+score+' ud af 5 rigtige. '+(score===5?'Flot. Du har styr på de centrale begreber.':'Læs de relevante afsnit igen, og prøv derefter testen en gang til.');});
@@ -165,7 +167,17 @@ teacherForm.addEventListener('submit',e=>{e.preventDefault();if(teacherInput.val
 teacherClose.addEventListener('click',()=>{teacherContent.hidden=true;teacherMessage.textContent='Området er lukket.';teacherMessage.style.color='var(--muted)';document.getElementById('underviser').scrollIntoView({behavior:'smooth',block:'start'});});
 </script>
 
+<footer style="text-align: center;">
+    <br><br>
+    FVU-Digital • Digitale færdigheder til hverdagen © 2026 Michael Ellegaard Haslund
+    <br><br><br>
+</footer>
+
 <script data-goatcounter="https://michael-haslund.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+</body>
+</html>
+
+</main>
 </body></html>
