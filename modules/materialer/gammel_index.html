@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find og download undervisningsmaterialer efter emne.">
+    <title>Materialer</title>
+
+    <!-- Kan senere suppleres med ../../assets/css/main.css -->
+    <link rel="stylesheet" href="materialer.css">
+    <script src="materialer.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#materialer">Gå til materialerne</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="back-link" href="../../index.html">← Tilbage til forsiden</a>
+        </div>
+    </header>
+
+    <main id="materialer" class="page-shell">
+        <section class="page-intro" aria-labelledby="page-title">
+            <p class="eyebrow">Downloadbibliotek</p>
+            <h1 id="page-title">Materialer</h1>
+            <p class="intro-text">
+                Vælg et emne for at finde vejledninger, arbejdsark,
+                præsentationer og andre materialer.
+            </p>
+
+            <label class="search-box" for="materialSearch">
+                <span aria-hidden="true">⌕</span>
+                <span class="sr-only">Søg i alle materialer</span>
+                <input
+                    id="materialSearch"
+                    type="search"
+                    placeholder="Søg efter et materiale"
+                    autocomplete="off"
+                >
+            </label>
+        </section>
+
+        <section class="topic-section" aria-labelledby="topic-title">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">Find efter emne</p>
+                    <h2 id="topic-title">Vælg et område</h2>
+                </div>
+                <p id="materialStatus" class="status" aria-live="polite">Materialerne indlæses …</p>
+            </div>
+
+            <div id="topicGrid" class="topic-grid" aria-label="Materialekategorier"></div>
+        </section>
+
+        <section id="resultsSection" class="results-section" aria-labelledby="resultsTitle" hidden>
+            <div class="results-header">
+                <div>
+                    <p class="section-kicker">Valgt område</p>
+                    <h2 id="resultsTitle">Materialer</h2>
+                </div>
+                <button id="showAllButton" class="secondary-button" type="button">
+                    Vis alle emner
+                </button>
+            </div>
+            <div id="materialsContainer"></div>
+        </section>
+
+        <noscript>
+            <p class="message">JavaScript skal være aktiveret for at vise materialelisten.</p>
+        </noscript>
+<footer style="text-align: center;">
+    <br><br>
+    FVU-Digital • Digitale færdigheder til hverdagen © 2026 Michael Ellegaard Haslund
+    <br><br><br>
+</footer>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
+    </main>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dit digitale læringsunivers i FVU-IT</title>
+
+<style>
+
+:root{
+--navy:#173b67;
+--blue:#2563a6;
+--sky:#eaf4ff;
+--gold:#f5b942;
+--green:#16856b;
+--page:#f5f8fc;
+--text:#233142;
+--line:#d8e5f1;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:-apple-system,Segoe UI,Roboto,sans-serif;
+background:var(--page);
+color:var(--text);
+line-height:1.6;
+}
+
+.hero{
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:clamp(2.5rem,6vw,4.5rem);
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:1.2rem;
+}
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.section h2{
+margin-bottom:15px;
+color:var(--navy);
+font-size:2rem;
+}
+
+.section p{
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+border:1px solid var(--line);
+text-decoration:none;
+color:inherit;
+transition:.2s;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card .icon{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--navy);
+}
+
+.emner{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.emne{
+background:white;
+padding:18px;
+border-radius:15px;
+text-decoration:none;
+color:var(--navy);
+font-weight:600;
+border:1px solid var(--line);
+text-align:center;
+transition:.2s;
+}
+
+.emne:hover{
+background:var(--sky);
+}
+
+.highlight{
+background:white;
+border-radius:25px;
+padding:40px;
+border:1px solid var(--line);
+}
+
+.special{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.special-card{
+padding:30px;
+border-radius:25px;
+color:white;
+text-decoration:none;
+}
+
+.mobile{
+background:linear-gradient(135deg,#16856b,#27b08a);
+}
+
+.apps{
+background:linear-gradient(135deg,#2563a6,#4779d9);
+}
+
+footer{
+text-align:center;
+padding:40px 20px;
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>Dit digitale læringsunivers i FVU-IT</h1>
+
+<p>
+Lær at bruge computer, mobil og internettet i din hverdag.
+Find hjælp, guides og øvelser inden for digitale færdigheder.
+</p>
+
+</header>
+
+<section class="section">
+
+<h2>Hvad vil du gerne have hjælp til?</h2>
+
+<p>
+Vælg det spørgsmål, der passer bedst til det, du gerne vil lære.
+</p>
+
+<div class="grid">
+
+<a href="modules/filhaandtering/" class="card">
+<div class="icon">📁</div>
+<h3>Jeg kan ikke finde mine filer</h3>
+<p>Lær at gemme, organisere og finde dokumenter på din computer.</p>
+</a>
+
+<a href="modules/informationssoegning/" class="card">
+<div class="icon">🔍</div>
+<h3>Jeg vil blive bedre til at søge på nettet</h3>
+<p>Find information hurtigt og lær at vurdere kilder.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">🤖</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil lære at bruge AI</h3>
+<p>Lær at bruge Copilot, ChatGPT og andre AI-værktøjer.</p>
+</a>
+
+<a href="modules/mail/" class="card">
+<div class="icon">📧</div>
+<h3>Jeg vil blive bedre til mail</h3>
+<p>Send, modtag og organisér mails sikkert og effektivt.</p>
+</a>
+
+<a href="modules/mobil/" class="card">
+<div class="icon">📱</div>
+<h3>Jeg vil have styr på min mobil</h3>
+<p>Indstillinger, apps, billeder og sikker brug af mobilen.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">🔒</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Hvordan undgår jeg svindel?</h3>
+<p>Lær om sikkerhed, phishing og falske beskeder.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">📄</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil skrive dokumenter</h3>
+<p>Lær tekstbehandling i Word og andre programmer.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">💼</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg skal søge job</h3>
+<p>Ansøgninger, CV og digitale værktøjer til jobsøgning.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">🖥️ / 📱 </div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil lære min enhed at kende</h3>
+<p>Lær grundlæggende brug af PC, Tablet og MacBook.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">📊</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil arbejde med regneark</h3>
+<p>Lær at bruge regnearkets funktioner til budget osv.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">🗄️</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil lære noget om databaser</h3>
+<p>Lær hvordan du kan arbejde med databaser i Access.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">⚠</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil være bedre til at opdage Fakenews</h3>
+<p>Lær at genkende Fakenews og AI-genereret materiale</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">📷</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil lære grundlæggende billedredigering</h3>
+<p>Lær at justere farver, beskære billeder og fjerne røde øjne.</p>
+</a>
+
+<a href="#" class="card">
+<div class="icon">📸</div>
+<h3><span style="color:red;">UNDER OPBYGNING: </span>Jeg vil lære avanceret billedredigering</h3>
+<p>Lær at arbejde med lag og filtre.</p>
+</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<div style="
+    background:#eef5fc;
+    border:1px solid #d8e5f1;
+    border-radius:30px;
+    padding:50px 30px;
+    text-align:center;
+">
+
+    <h2 style="
+        color:#173b67;
+        font-size:2.8rem;
+        margin-bottom:15px;
+    ">
+        Din digitale læringsrejse
+    </h2>
+
+    <p style="
+        color:#4a5f7a;
+        font-size:1.2rem;
+        margin-bottom:50px;
+    ">
+        Er du i tvivl om, hvor du skal begynde? Følg trinene fra venstre mod højre.
+    </p>
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        position:relative;
+        gap:10px;
+        flex-wrap:wrap;
+    ">
+
+        <!-- Linje mellem punkterne -->
+        <div style="
+            position:absolute;
+            top:28px;
+            left:10%;
+            right:10%;
+            height:4px;
+            background:#a9c9ec;
+            z-index:1;
+        "></div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">1</div>
+            <strong style="color:#173b67;">Computer</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Lær din computer at kende
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">2</div>
+            <strong style="color:#173b67;">Filer</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Filhåndtering
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">3</div>
+            <strong style="color:#173b67;">Mail</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Send og modtag mails
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">4</div>
+            <strong style="color:#173b67;">Søgning</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Informationssøgning
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">5</div>
+            <strong style="color:#173b67;">AI</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Informationssøgning med AI
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">6</div>
+            <strong style="color:#173b67;">Sikkerhed</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Undgå svindel og phishing
+            </div>
+        </div>
+
+        <div style="flex:1;min-width:120px;position:relative;z-index:2;">
+            <div style="
+                width:56px;
+                height:56px;
+                border-radius:50%;
+                background:#2563a6;
+                color:white;
+                font-size:1.5rem;
+                font-weight:bold;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 15px;
+            ">7</div>
+            <strong style="color:#173b67;">Mobil</strong>
+            <div style="font-size:0.9rem;color:#556;margin-top:5px;">
+                Styr på mobilen
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="special">
+
+<a href="apps/" class="special-card apps">
+
+<h2>📱 App-kataloget</h2>
+
+<p>
+Find oplysninger om populære apps til hverdagen.
+Læs om MitID, Digital Post, Outlook, Teams,
+MobilePay, Rejseplanen, OneDrive og mange flere.
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="special">
+
+<a href="modules/ordbog/" class="special-card apps">
+
+<h2>📖 Ordbog</h2>
+
+<p>
+Her finder du et opslagsværk til ord, du støder på i undervisningsmaterialet og i undervisningen
+</p>
+
+</a>
+
+</div>
+</section>
+
+<section class="section">
+<div class="special">
+<a href="modules/materialer/" class="special-card apps">
+<h2>📂 Materialer</h2>
+
+<p>
+Download vejledninger, arbejdsark, præsentationer og øvrigt kursusmateriale.
+
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+</p>
+
+<section class="section">
+<h2>Foretrækker du at gå direkte til et emne?</h2>
+
+<p>
+Her finder du alle emnerne samlet.
+</p>
+
+<div class="emner">
+
+<a href="modules/filhaandtering/" class="emne">Filhåndtering</a>
+
+<a href="modules/informationssoegning/" class="emne">Informationssøgning uden AI</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>AI og informationssøgning
+</a>
+
+<a href="modules/mail/" class="emne">Digital kommunikation</a>
+
+<a href="modules/mobil/" class="emne">Styr på mobilen</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Lær din computer og enhed at kende
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Sikkerhed og svindel
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Tekstbehandling
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Jobsøgning
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Regneark
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Databaser og Access
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Fake News
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Grundlæggende billedredigering
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Avanceret billedredigering
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>Google Fotos
+</a>
+
+<a href="#" class="emne">
+<span style="color:red;">UNDER OPBYGNING: </span>GDPR
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+  <p>
+    FVU-Digital • Digitale færdigheder til hverdagen •
+    <a href="om-mig/">Om mig & kontakt</a>
+  </p>
+  <p>
+    © 2026 Michael Ellegaard Haslund
+  </p>
+</footer>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
