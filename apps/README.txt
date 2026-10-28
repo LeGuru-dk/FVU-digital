@@ -1,0 +1,1 @@
+Kataloget er opdelt i 19 appmapper. Siderne genbruger det oprindelige profil-layout og linker til ../../assets/css/main.css, så de kan følge FVU-Digitals fælles main.css. På desktop/tablet står QR-koder side om side; under 760 px stables de som i den oprindelige responsive CSS.
