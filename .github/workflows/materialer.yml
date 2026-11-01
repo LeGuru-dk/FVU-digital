@@ -1,22 +1,23 @@
 name: Generer materialeliste
 
 on:
-  push:
-    branches:
-      - main
-
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
 
 permissions:
   contents: write
 
 jobs:
   generate-materials:
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Hent repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Opsæt Python
         uses: actions/setup-python@v5
@@ -30,3 +31,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automatisk opdatering af materialer.json"
+          file_pattern: data/materialer.json
