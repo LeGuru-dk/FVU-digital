@@ -555,7 +555,32 @@ textarea:focus { outline: var(--focus-ring); border-color: var(--color-blue); }
   font-weight: 850;
 }
 
-/* 14. HJÆLPEKLASSER ------------------------------------------------- */
+/* 14. VIDEO --------------------------------------------------------- */
+.videobox {
+  width: 100%;
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  padding: 0;
+  border-radius: var(--radius-md);
+  background: #000;
+}
+
+.video-placeholder iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border: 0;
+  display: block;
+}
+
+/* 15. HJÆLPEKLASSER ------------------------------------------------- */
 .mt-1 { margin-top: var(--space-1); }
 .mt-2 { margin-top: var(--space-2); }
 .mt-3 { margin-top: var(--space-3); }
@@ -567,7 +592,7 @@ textarea:focus { outline: var(--focus-ring); border-color: var(--color-blue); }
 .footer,
 footer { padding: 30px 18px; color: var(--color-muted); text-align: center; }
 
-/* 15. RESPONSIVITET ------------------------------------------------- */
+/* 16. RESPONSIVITET ------------------------------------------------- */
 @media (max-width: 780px) {
   :root { --page-padding: 16px; }
   .hero-inner,
@@ -604,7 +629,7 @@ footer { padding: 30px 18px; color: var(--color-muted); text-align: center; }
   }
 }
 
-/* 16. PRINT --------------------------------------------------------- */
+/* 17. PRINT --------------------------------------------------------- */
 @media print {
   .top,
   .site-header,
@@ -625,7 +650,7 @@ footer { padding: 30px 18px; color: var(--color-muted); text-align: center; }
 }
 
 
-/* 17. FORSIDE ------------------------------------------------------- */
+/* 18. FORSIDE ------------------------------------------------------- */
 .home-hero,
 body > .hero:first-of-type {
   padding: 80px 20px;
