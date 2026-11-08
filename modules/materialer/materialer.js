@@ -1,21 +1,5 @@
 "use strict";
 
-const topicDefinitions = [
-    { slug: "ai", title: "AI", icon: "🤖", text: "Materialer om kunstig intelligens" },
-    { slug: "filhaandtering", title: "Filhåndtering", icon: "📂", text: "Filer, mapper og organisering" },
-    { slug: "gdpr", title: "GDPR", icon: "🔐", text: "Persondata og sikker behandling" },
-    { slug: "google-fotos", title: "Google Fotos", icon: "🖼️", text: "Billeder, deling og organisering" },
-    { slug: "informationssoegning", title: "Informationssøgning", icon: "🔎", text: "Søgning og kildekritik" },
-    { slug: "jobsogning", title: "Jobsøgning", icon: "💼", text: "Digitale værktøjer til jobsøgning" },
-    { slug: "laer-din-computer-at-kende", title: "Lær din computer at kende", icon: "💻", text: "Computerens dele, mus, tastatur, mapper og filer" },
-    { slug: "mail", title: "Mail", icon: "✉️", text: "Mail, mapper og god digital praksis" },
-    { slug: "mobil", title: "Mobil", icon: "📱", text: "Smartphone, apps og indstillinger" },
-    { slug: "ordbog", title: "Ordbog", icon: "📖", text: "Ord og begreber fra undervisningen" },
-    { slug: "sikkerhed", title: "Sikkerhed", icon: "🛡️", text: "Adgangskoder, svindel og beskyttelse" },
-    { slug: "tekstbehandling", title: "Tekstbehandling", icon: "📝", text: "Dokumenter, formatering og opsætning" },
-    { slug: "virksomhedshold", title: "Virksomhedshold", icon: "🏭", text: "Materialer til virksomhedshold, herunder Cimbria" }
-];
-
 const elements = {
     grid: document.getElementById("topicGrid"),
     container: document.getElementById("materialsContainer"),
@@ -27,6 +11,7 @@ const elements = {
 };
 
 let allItems = [];
+let topicDefinitions = [];
 let activeSlug = null;
 
 fetch("../../data/materialer.json")
@@ -36,18 +21,21 @@ fetch("../../data/materialer.json")
     })
     .then(data => {
         allItems = Array.isArray(data.items) ? data.items : [];
+        topicDefinitions = window.FvuCategories.fromItems(allItems);
         renderTopicCards();
-        elements.status.textContent = "Vælg et emne for at se materialerne";
+        elements.status.textContent = topicDefinitions.length
+            ? "Vælg et emne for at se materialerne"
+            : "Der er endnu ingen materialemapper";
 
         const requestedTopic = decodeURIComponent(location.hash.replace(/^#/, ""));
         if (requestedTopic && topicDefinitions.some(topic => topic.slug === requestedTopic)) {
             selectTopic(requestedTopic, false);
         }
     })
-    .catch(() => {
-        renderTopicCards();
-        elements.status.textContent = "Materialelisten er ikke genereret endnu";
-        showMessage("Der er endnu ingen genereret materialeliste. Kør GitHub Actions-workflowet efter næste push.");
+    .catch(error => {
+        console.error(error);
+        elements.status.textContent = "Materialelisten kunne ikke indlæses";
+        showMessage("Materialelisten er ikke genereret endnu. Kør GitHub Actions-workflowet efter næste push.");
     });
 
 elements.search.addEventListener("input", handleSearch);
@@ -63,10 +51,8 @@ elements.showAll.addEventListener("click", () => {
 
 function renderTopicCards() {
     elements.grid.replaceChildren();
-
     topicDefinitions.forEach(topic => {
-        const folder = findTopFolder(topic.slug);
-        const count = folder ? countFiles(folder.children || []) : 0;
+        const count = countFiles(topic.folder.children || []);
         const button = document.createElement("button");
         button.type = "button";
         button.className = "topic-card";
@@ -104,10 +90,10 @@ function selectTopic(slug, updateHash) {
     elements.results.hidden = false;
     updatePressedCards();
 
-    const folder = findTopFolder(slug);
-    if (folder && Array.isArray(folder.children) && folder.children.length) {
-        renderItems(folder.children);
-        const count = countFiles(folder.children);
+    const children = topic.folder.children || [];
+    if (children.length) {
+        renderItems(children);
+        const count = countFiles(children);
         elements.status.textContent = count === 1 ? "1 materiale" : `${count} materialer`;
     } else {
         showMessage(`Der er endnu ingen materialer under ${topic.title}.`);
@@ -120,7 +106,6 @@ function selectTopic(slug, updateHash) {
 
 function handleSearch() {
     const query = elements.search.value.trim().toLocaleLowerCase("da-DK");
-
     if (!query) {
         if (activeSlug) selectTopic(activeSlug, false);
         else elements.results.hidden = true;
@@ -131,29 +116,11 @@ function handleSearch() {
     updatePressedCards();
     elements.results.hidden = false;
     elements.title.textContent = `Søgeresultater for “${elements.search.value.trim()}”`;
-
     const matches = filterItems(allItems, query);
     const count = countFiles(matches);
     elements.status.textContent = count === 1 ? "1 resultat" : `${count} resultater`;
-
     if (count) renderItems(matches);
     else showMessage("Ingen materialer matcher din søgning.");
-}
-
-function findTopFolder(slug) {
-    return allItems.find(item => item.type === "folder" && normaliseSlug(item.name) === slug);
-}
-
-function normaliseSlug(value) {
-    return String(value)
-        .toLocaleLowerCase("da-DK")
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "")
-        .replace(/æ/g, "ae")
-        .replace(/ø/g, "oe")
-        .replace(/å/g, "aa")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "");
 }
 
 function filterItems(items, query) {
@@ -171,20 +138,15 @@ function filterItems(items, query) {
 
 function renderItems(items, target = elements.container) {
     if (target === elements.container) target.replaceChildren();
-
     items.forEach(item => {
         if (item.type === "folder") {
             const details = document.createElement("details");
             details.className = "material-folder";
-            details.open = false;
-
             const summary = document.createElement("summary");
             summary.textContent = `📁 ${item.name}`;
-
             const content = document.createElement("div");
             content.className = "folder-content";
             renderItems(item.children || [], content);
-
             details.append(summary, content);
             target.appendChild(details);
             return;
@@ -192,12 +154,10 @@ function renderItems(items, target = elements.container) {
 
         const article = document.createElement("article");
         article.className = "material-file";
-
         const icon = document.createElement("span");
         icon.className = "file-icon";
         icon.setAttribute("aria-hidden", "true");
         icon.textContent = fileIcon(item.extension);
-
         const info = document.createElement("div");
         info.className = "file-info";
         const name = document.createElement("strong");
@@ -205,14 +165,12 @@ function renderItems(items, target = elements.container) {
         const meta = document.createElement("small");
         meta.textContent = `${String(item.extension || "fil").toUpperCase()} · ${formatBytes(Number(item.size) || 0)}`;
         info.append(name, meta);
-
         const link = document.createElement("a");
         link.className = "download-button";
         link.href = `../../${String(item.url || "").replace(/^\/+/, "")}`;
         link.download = "";
         link.textContent = "Download";
         link.setAttribute("aria-label", `Download ${item.name}`);
-
         article.append(icon, info, link);
         target.appendChild(article);
     });
@@ -234,9 +192,8 @@ function updatePressedCards() {
 }
 
 function countFiles(items) {
-    return items.reduce((total, item) => {
-        return total + (item.type === "file" ? 1 : countFiles(item.children || []));
-    }, 0);
+    return items.reduce((total, item) => total +
+        (item.type === "file" ? 1 : countFiles(item.children || [])), 0);
 }
 
 function readableName(filename) {
