@@ -31,8 +31,27 @@
 <details><summary>Tegn på læring</summary><ul><li>Kursisten vælger en relevant handling uden at prøve tilfældigt.</li><li>Kursisten kontrollerer resultat og placering.</li><li>Kursisten forklarer forskellen på flytning og kopiering.</li><li>Kursisten kan bruge samme forståelse på en anden enhed eller i en ny case.</li></ul></details>
 <details><summary>Evaluering og feedback</summary><p>Brug et kort praktisk starttjek, observation undervejs, makkerforklaring og en samlet slutopgave. Feedback gives som én konkret styrke og ét næste skridt. Vurder forstået og sikker handling frem for hastighed.</p></details>
 <details><summary>Sikkerhed og afgrænsning</summary><p>Arbejd kun med ufølsomme øvelsesfiler eller kopier. Undgå sletning af personlige filer. Kodelåsen er en praktisk afskærmning, ikke egentlig adgangssikkerhed.</p></details>
-<details><summary>Dokumenter</summary><div class="actions"><a class="btn secondary" href="downloads/Lektionsplan_FVU_digital_3x45_minutter.docx">Lektionsplan</a><a class="btn secondary" href="downloads/Didaktiske_overvejelser_FVU_digital.docx">Didaktiske overvejelser</a></div></details></div></section></main><footer>FVU-Digital · Lær din enhed at kende</footer><script>
+<details><summary>Dokumenter</summary><div class="actions"><a class="btn secondary" href="downloads/Lektionsplan_FVU_digital_3x45_minutter.docx">Lektionsplan</a><a class="btn secondary" href="downloads/Didaktiske_overvejelser_FVU_digital.docx">Didaktiske overvejelser</a></div></details></div></section></main>  
+
+</body>
+</html></footer><script>
 const buttons=[...document.querySelectorAll('.device-btn')],blocks=[...document.querySelectorAll('.device-only')],note=document.querySelector('#selectedNote'),labels={windows:'Windows-computer',mac:'MacBook',ipad:'iPad/tablet'};function choose(d){document.body.dataset.device=d;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.device===d)));blocks.forEach(b=>b.classList.toggle('active',b.dataset.for===d));note.textContent='Du har valgt: '+labels[d];localStorage.setItem('fvu-device',d)}buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.device)));choose(localStorage.getItem('fvu-device')||'windows');
 document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault();let score=0,answered=0;['q1','q2','q3','q4','q5'].forEach(n=>{const x=document.querySelector('input[name="'+n+'"]:checked');if(x){answered++;score+=Number(x.value)}});const r=document.getElementById('quizResult');r.style.display='block';r.textContent=answered<5?'Besvar alle fem spørgsmål først.':'Du fik '+score+' ud af 5 rigtige. '+(score===5?'Flot. Du kan forklare de centrale handlinger.':'Læs de relevante afsnit igen, og prøv derefter testen en gang til.')});
 const TEACHER_CODE='2002',tf=document.getElementById('teacherUnlockForm'),ti=document.getElementById('teacherCode'),tm=document.getElementById('teacherMessage'),tc=document.getElementById('teacherContent');tf.addEventListener('submit',e=>{e.preventDefault();if(ti.value===TEACHER_CODE){tc.hidden=false;tm.textContent='Området er åbnet.';tm.style.color='var(--green)';ti.value='';tc.scrollIntoView({behavior:'smooth',block:'start'})}else{tm.textContent='Koden er ikke korrekt.';tm.style.color='#a43b32';ti.select()}});document.getElementById('teacherClose').addEventListener('click',()=>{tc.hidden=true;tm.textContent='Området er lukket.';tm.style.color='var(--muted)';document.getElementById('underviser').scrollIntoView({behavior:'smooth'})});
-</script></body></html>
+</script>
+<footer>
+
+  <p>
+    FVU-Digital • Digitale færdigheder til hverdagen •
+    <a href="">Om mig & kontakt</a>
+  </p>
+  <p>
+    © 2026 Michael Ellegaard Haslund
+  </p>
+</footer>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

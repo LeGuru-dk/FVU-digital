@@ -8,4 +8,20 @@ buttons('.platforms',platforms,'platform');buttons('.cats',cats,'cat');
 document.addEventListener('click',e=>{let b=e.target.closest('button[data-platform],button[data-cat]');if(!b)return;if(b.dataset.platform){platform=b.dataset.platform;document.querySelectorAll('[data-platform]').forEach(x=>x.classList.toggle('active',x===b))}else{cat=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x===b))}render()});
 $('#search').addEventListener('input',render);$('#size').addEventListener('click',()=>{document.body.classList.toggle('big');$('#size').textContent=document.body.classList.contains('big')?'A− Normal tekst':'A+ Større tekst'});
 function render(){const q=$('#search').value.trim().toLocaleLowerCase('da');const rows=data.filter(x=>(platform==='Alle'||x.platform===platform)&&(cat==='Alle'||x.category===cat)&&(!q||Object.values(x).join(' ').toLocaleLowerCase('da').includes(q)));$('.count').textContent=`${rows.length} vejledning${rows.length===1?'':'er'} vises`;$('#list').innerHTML=rows.length?rows.map((x,i)=>`<details><summary><span class="tag">${esc(x.platform)} • ${esc(x.category)}</span>${esc(x.title)}</summary><div class="content"><div class="steps"><strong>Sådan gør du</strong><br>${esc(x.steps)}</div><div class="note"><strong>Husk</strong><br>${esc(x.note)}</div></div></details>`).join(''):`<div class="empty"><h2>Ingen vejledninger fundet</h2><p>Prøv et kortere søgeord, fx <strong>tekst</strong>, <strong>lyd</strong> eller <strong>zoom</strong>.</p></div>`}render();
-</script></body></html>
+</script>
+<footer>
+
+  <p>
+    FVU-Digital • Digitale færdigheder til hverdagen •
+    <a href="om-mig/">Om mig & kontakt</a>
+  </p>
+  <p>
+    © 2026 Michael Ellegaard Haslund
+  </p>
+</footer>
+
+<script data-goatcounter="https://michael-haslund.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
